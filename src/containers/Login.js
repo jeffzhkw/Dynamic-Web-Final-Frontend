@@ -16,7 +16,6 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
           setLoggedIn(true);
           // setUserInformation({
           //   email: user.email,
@@ -29,9 +28,10 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.warn({ errorCode, errorMessage });
+          setErrors(errorMessage);
         });
     },
-    [setLoggedIn, setUserInformation]
+    [setLoggedIn, setErrors]
   );
 
   return (

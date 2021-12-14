@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
-import { MOCK_DATA } from "./Home";
 import MusicCard from "../components/MusicCard";
 
 function Profile({ userInformation }) {
@@ -21,7 +20,7 @@ function Profile({ userInformation }) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [uid]);
 
   return (
     <div className="PageWrapper">

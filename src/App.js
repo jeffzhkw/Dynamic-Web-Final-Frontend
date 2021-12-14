@@ -19,14 +19,10 @@ import Header from "./components/Header";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+// Your web app's Firebase configuration
 import FirebaseConfig from "./components/FirebaseConfig";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-
-// Initialize Firebase
-const app = initializeApp(FirebaseConfig);
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false); // Track if user is logged in
@@ -83,6 +79,7 @@ function App() {
         loggedIn={loggedIn}
         userInformation={userInformation}
       />
+      {errors && <p className="Error PageWrapper">{errors}</p>}
       <Router>
         <Routes>
           <Route

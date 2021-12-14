@@ -2,18 +2,6 @@ import { React, useState, useEffect } from "react";
 import axios from "axios";
 import MusicCard from "../components/MusicCard";
 
-export const MOCK_DATA = [
-  {
-    postID: "aqwerasd;lkj",
-    uid: "asdfjkl;",
-    displayName: "jeffzhkw",
-    comment: "good",
-    title: "asdfasdfasdf",
-    artist: "asdf",
-    link: "asdfasdf",
-  },
-];
-
 function Home() {
   const [postList, setPostList] = useState([]);
   //Get all music post
@@ -28,6 +16,7 @@ function Home() {
         console.log(err);
       });
   }, []);
+
   return (
     <div className="PageWrapper">
       <h1>This is Home page with all the post </h1>

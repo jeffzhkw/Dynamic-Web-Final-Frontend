@@ -1,6 +1,5 @@
 import React from "react";
 
-const userID = "abc";
 function Header({ logout, loggedIn, userInformation }) {
   console.log(userInformation);
   return (
