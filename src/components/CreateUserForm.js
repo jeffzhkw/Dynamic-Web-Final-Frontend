@@ -2,7 +2,7 @@ import React from "react";
 
 function CreateUserForm({ signUpUser }) {
   return (
-    <div className="form">
+    <div className="Form">
       <h2>Create User Form</h2>
       <form onSubmit={(e) => signUpUser(e)}>
         <label htmlFor="email">Email</label>
@@ -12,6 +12,12 @@ function CreateUserForm({ signUpUser }) {
           type="password"
           name="password"
           placeholder="Enter Password"
+        ></input>
+        <label htmlFor="displayName">Username</label>
+        <input
+          type="text"
+          name="displayName"
+          placeholder="Enter Your Display Username"
         ></input>
         <button type="submit">Create User!</button>
       </form>

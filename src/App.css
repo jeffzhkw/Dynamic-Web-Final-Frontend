@@ -1,6 +1,54 @@
-* {
-  box-sizing: border-box;
+.PageWrapper {
+  margin: 0;
+  max-width: 1280px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
-.App {
-  text-align: center;
+
+.HeaderWrapper {
+  border-bottom: 1px solid red;
+  padding: 5px 0;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Header nav a {
+  color: black;
+  padding: 0 5px;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.Header nav a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.Form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-width: 500px;
+}
+
+.Form input {
+  margin-bottom: 30px;
+  padding: 10px 5px;
+}
+
+.MusicCard {
+  border: 1px solid black;
+  display: flex;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.MusicCard div {
+  flex-basis: 50%;
 }

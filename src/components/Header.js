@@ -1,14 +1,27 @@
 import React from "react";
 
-const userID;
-function Header() {}
-return (
-  <header>
-    <a href="/home">Home</a>
-    <a href="/login">Login</a>
-    <a href="/addpost">Add Post</a>
-    {/* Get user ID */}
-    <a href={"/profile/"+userID}>Profile</a>
-    <a href=""></a>
-  </header>
-);
+const userID = "abc";
+function Header({ logout, loggedIn, userInformation }) {
+  console.log(userInformation);
+  return (
+    <header className="HeaderWrapper">
+      <div className="Header">
+        <h1>Music Sharing Site</h1>
+        <nav>
+          {loggedIn && (
+            <>
+              <a href="/home">Home</a>
+              <a href="/addpost">Add Post</a>
+              <a href={`/profile/${userInformation.uid}`}>
+                {userInformation.displayName}
+              </a>
+              <button onClick={() => logout()}>Log out</button>
+            </>
+          )}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+export default Header;
