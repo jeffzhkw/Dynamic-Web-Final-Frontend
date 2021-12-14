@@ -19,7 +19,8 @@ function Home() {
 
   return (
     <div className="PageWrapper">
-      <h1>This is Home page with all the post </h1>
+      <h1>Home </h1>
+      <h2>All the posts are here</h2>
       {postList.map((aCard, i) => {
         return (
           <MusicCard

@@ -1,5 +1,5 @@
 .PageWrapper {
-  margin: 0;
+  margin: 0px auto;
   max-width: 1280px;
   padding-left: 25px;
   padding-right: 25px;
@@ -51,4 +51,9 @@
 
 .MusicCard div {
   flex-basis: 50%;
+}
+
+.MusicCard h1,
+h2 {
+  margin: 0;
 }

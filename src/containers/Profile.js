@@ -24,23 +24,24 @@ function Profile({ userInformation }) {
 
   return (
     <div className="PageWrapper">
-      <h1>This is user profile page</h1>
-      <p>Username: {userInformation.displayName}</p>
-      <p>user email: {userInformation.email}</p>
-      <h2>Posts</h2>
+      <h1>Profile</h1>
       {/* Display post by one user */}
-      {userPostList.map((aCard, i) => {
-        return (
-          <MusicCard
-            displayName={aCard.displayName}
-            uid={aCard.uid}
-            comment={aCard.comment}
-            title={aCard.title}
-            artist={aCard.artist}
-            link={aCard.link}
-          />
-        );
-      })}
+      {userPostList.length !== 0 ? (
+        userPostList.map((aCard, i) => {
+          return (
+            <MusicCard
+              displayName={aCard.displayName}
+              uid={aCard.uid}
+              comment={aCard.comment}
+              title={aCard.title}
+              artist={aCard.artist}
+              link={aCard.link}
+            />
+          );
+        })
+      ) : (
+        <p>No post for this user</p>
+      )}
     </div>
   );
 }

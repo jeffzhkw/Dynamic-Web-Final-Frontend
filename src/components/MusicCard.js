@@ -4,7 +4,6 @@ import React from "react";
 function MusicCard({ displayName, uid, title, artist, comment, link }) {
   return (
     <div className="MusicCard">
-      <p>This is a music card</p>
       <div>
         <h1>{title}</h1>
         <h2>{artist}</h2>

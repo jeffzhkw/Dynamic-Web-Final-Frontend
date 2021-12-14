@@ -141,13 +141,7 @@ function App() {
 
           <Route
             path="/"
-            element={
-              !loggedIn ? (
-                <Start loggedIn={loggedIn} />
-              ) : (
-                <Navigate to="/home" />
-              )
-            }
+            element={!loggedIn ? <Start /> : <Navigate to="/home" />}
           ></Route>
         </Routes>
       </Router>
