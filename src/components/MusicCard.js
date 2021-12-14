@@ -1,6 +1,6 @@
 // User that send this
 import React from "react";
-
+import { Link } from "react-router-dom";
 function MusicCard({ displayName, uid, title, artist, comment, link }) {
   return (
     <div className="MusicCard">
@@ -8,7 +8,7 @@ function MusicCard({ displayName, uid, title, artist, comment, link }) {
         <h1>{title}</h1>
         <h2>{artist}</h2>
         <p>
-          Posted by: <a href={`/profile/${uid}`}>{displayName}</a>
+          Posted by: <Link to={`/profile/${uid}`}>{displayName}</Link>
         </p>
 
         <p>Comment: {comment}</p>
