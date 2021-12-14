@@ -14,15 +14,14 @@ export const MOCK_DATA = [
   },
 ];
 
-const URL = `http://localhost:4000`;
-
 function Home() {
   const [postList, setPostList] = useState([]);
   //Get all music post
   useEffect(() => {
     axios
-      .get(URL)
+      .get(process.env.REACT_APP_API_URL)
       .then((res) => {
+        console.log(res);
         setPostList(res.data);
       })
       .catch((err) => {
@@ -35,7 +34,7 @@ function Home() {
       {postList.map((aCard, i) => {
         return (
           <MusicCard
-            username={aCard.username}
+            displayName={aCard.displayName}
             uid={aCard.uid}
             comment={aCard.comment}
             title={aCard.title}

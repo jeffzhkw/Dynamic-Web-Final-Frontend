@@ -121,7 +121,7 @@ function App() {
           ></Route>
 
           <Route
-            path="/profile/:id"
+            path="/profile/:uid"
             element={
               loggedIn ? (
                 <Profile userInformation={userInformation} />

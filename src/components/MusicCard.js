@@ -1,7 +1,7 @@
 // User that send this
 import React from "react";
 
-function MusicCard({ username, uid, title, artist, comment, link }) {
+function MusicCard({ displayName, uid, title, artist, comment, link }) {
   return (
     <div className="MusicCard">
       <p>This is a music card</p>
@@ -9,7 +9,7 @@ function MusicCard({ username, uid, title, artist, comment, link }) {
         <h1>{title}</h1>
         <h2>{artist}</h2>
         <p>
-          Posted by: <a href={`/profile/${uid}`}>{username}</a>
+          Posted by: <a href={`/profile/${uid}`}>{displayName}</a>
         </p>
 
         <p>Comment: {comment}</p>

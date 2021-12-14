@@ -18,7 +18,7 @@ function AddPost({ userInformation }) {
 
     axios
       .get(
-        `http://localhost:4000/newPost?uid=${uid}&displayName=${displayName}&comment=${comment}&title=${title}&artist=${artist}&link=${link}`
+        `${process.env.REACT_APP_API_URL}/newPost?uid=${uid}&displayName=${displayName}&comment=${comment}&title=${title}&artist=${artist}&link=${link}`
       )
       .then((res) => {
         console.log(res);
