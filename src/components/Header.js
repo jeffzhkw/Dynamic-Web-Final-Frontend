@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header({ logout, loggedIn, userInformation }) {
   console.log(userInformation);
@@ -9,11 +10,11 @@ function Header({ logout, loggedIn, userInformation }) {
         <nav>
           {loggedIn && (
             <>
-              <a href="/home">Home</a>
-              <a href="/addpost">Add Post</a>
-              <a href={`/profile/${userInformation.uid}`}>
+              <Link to="/home">Home</Link>
+              <Link to="/addpost">Add Post</Link>
+              <Link to={`/profile/${userInformation.uid}`}>
                 {userInformation.displayName}
-              </a>
+              </Link>
               <button onClick={() => logout()}>Log out</button>
             </>
           )}
