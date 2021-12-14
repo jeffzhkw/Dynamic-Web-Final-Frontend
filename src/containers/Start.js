@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Start() {
   return (
     <div className="PageWrapper">
       <h1>Welcome</h1>
       <p>
-        Please <a href="/login">Login</a> or <a href="/signup">Sign Up</a>
+        Please <Link to="/login">Login</Link> or{" "}
+        <Link to="/signup">Sign Up</Link>
       </p>
     </div>
   );
