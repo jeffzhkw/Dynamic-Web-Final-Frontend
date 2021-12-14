@@ -74,13 +74,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        logout={logout}
-        loggedIn={loggedIn}
-        userInformation={userInformation}
-      />
       {errors && <p className="Error PageWrapper">{errors}</p>}
       <Router>
+        <Header
+          logout={logout}
+          loggedIn={loggedIn}
+          userInformation={userInformation}
+        />
         <Routes>
           <Route
             path="/signup"
